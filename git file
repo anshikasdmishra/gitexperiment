@@ -1,0 +1,56 @@
+# Version Control Operations Using Git
+
+**Project: Student Management System**
+
+```bash
+# 1. Create project folder
+mkdir "Student Management System"
+cd "Student Management System"
+
+# 2. Initialize Git repository
+git init
+git branch -M main
+
+# 3. Configure Git (if not already configured)
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+
+# 4. Create student.txt
+echo "Student Management System" > student.txt
+echo "101, Rahul Sharma, AI & Data Science, Third Year" >> student.txt
+echo "102, Priya Patil, Computer Engineering, Second Year" >> student.txt
+
+# 5. Stage and commit
+git add student.txt
+git commit -m "Initial commit"
+
+# 6. Link GitHub repository (replace with your URL)
+git remote add origin https://github.com/YOUR-USERNAME/Student-Management-System.git
+
+# 7. Push to GitHub
+git push -u origin main
+
+# 8. Create and switch to feature branch
+git branch feature-update
+git switch feature-update
+
+# 9. Add new student records
+echo "103, Amit Verma, Information Technology, Third Year" >> student.txt
+echo "104, Sneha Desai, Artificial Intelligence, Second Year" >> student.txt
+
+# 10. Stage and commit changes
+git add student.txt
+git commit -m "Added additional student records"
+
+# 11. Merge into main branch
+git switch main
+git merge feature-update
+
+# 12. Push merged changes
+git push origin main
+
+# 13. Display commit history
+git log --oneline --all --graph
+```
+
+**Conclusion:** Basic Git operations, including repository initialization, staging, committing, branching, merging, pushing to GitHub, and viewing commit history, were performed successfully.
